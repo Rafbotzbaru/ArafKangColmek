@@ -1,7 +1,7 @@
 let { MessageType } = require('@adiwajshing/baileys')
 const potion = 500
-const Ssapphire = 354
-const Bsapphire = 3579
+const Sspesial = 5000000000
+const Bspesial = 1
 const Sruby = 27400000
 const Bruby = 76800000
 const Szamrud = 25600000
@@ -105,7 +105,6 @@ bila sudah tidak ada harganya, berarti sudah tidak bisa dibeli / sudah level max
 ━━━━━━━━━━━━━━━━━━━
 *🥤 Potion:* ${potion}
 *🍶 Aqua:* ${Baqua}
-*⚱ Sapphire:* ${Bsapphire}
 *🪙  Gold :* ${Bgold}
 *💎 Diamond:* ${Bdiamond}
 *💍 Ruby:* ${Bruby}
@@ -116,6 +115,7 @@ bila sudah tidak ada harganya, berarti sudah tidak bisa dibeli / sudah level max
 *⛓️ Iron:* ${Biron}
 *🗑️ Sampah:* ${Bsampah}
 
+*🗿 Spesial:* ${Bspesial}
 *📦 Common:* ${Bcommon} 
 *🛍️ Uncommon:* ${Buncommon}
 *🎁 Mythic:* ${Bmythic}
@@ -123,7 +123,6 @@ bila sudah tidak ada harganya, berarti sudah tidak bisa dibeli / sudah level max
 *👑 Superior:* ${Bsuperior}
 *🔐 Ancient:* ${Bancient}
 *🔐 SuperAncient:* ${Ssuperancient}
-
 *📫 Pet:* ${Bpet}
 
 *🥼 Armor:* ${armor}
@@ -146,12 +145,12 @@ bila sudah tidak ada harganya, berarti sudah tidak bisa dibeli / sudah level max
 *🪵 Kayu:* ${Skayu}
 *🕸️ String:* ${Sstring}
 *⛓️ Iron:* ${Siron}
-*⚱ Sapphire:* ${Ssapphire}
 *💎 Diamond:* ${Sdiamond}
 *💍 Ruby:* ${Sruby}
 *🔮 Zamrud:* ${Szamrud}
 *🗑️ Sampah:* ${Ssampah}
 
+*🗿 Spesial:* ${Sspesial}
 *📦 Common:* ${Scommon}
 *🛍️ Uncommon:* ${Suncommon}
 *🎁 Mythic:* ${Smythic}
@@ -336,12 +335,12 @@ bila sudah tidak ada harganya, berarti sudah tidak bisa dibeli / sudah level max
                             conn.reply(m.chat, `Sukses Membeli ${count} Zamrud 🔮 Dengan Harga ${Bzamrud * count} ruby`, m)
                             } else conn.reply(m.chat, `ruby Anda Tidak Cukup Untuk Membeli ${count} Zamrud Dengan Harga ${Bzamrud * count} ruby `,)
                         break
-                    case `sapphire`:
-                            if (global.db.data.users[m.sender].zamrud >= Bsapphire * count) {
-                            global.db.data.users[m.sender].zamrud -= Bsapphire * count
-                            global.db.data.users[m.sender].sapphire += count * 1
-                            conn.reply(m.chat, `Sukses Membeli ${count} sapphire ⚱ Dengan Harga ${Bsapphire * count} zamrud`, m)
-                            } else conn.reply(m.chat, `zamrud Anda Tidak Cukup Untuk Membeli ${count} Sapphire Dengan Harga ${Bsapphire * count} zamrud `,)
+                    case `spesial`:
+                            if (global.db.data.users[m.sender].gold >= Bspesial * count) {
+                            global.db.data.users[m.sender].gold -= Bspesial * count
+                            global.db.data.users[m.sender].spesial += count * 1
+                            conn.reply(m.chat, `Sukses Membeli ${count} Spesial 🗿 Dengan Harga ${Bspesial * count} gold`, m)
+                            } else conn.reply(m.chat, `spesial Anda Tidak Cukup Untuk Membeli ${count} Spesial Dengan Harga ${Bgold * count} gold `,)
                         break
                     case 'bibitmangga':
                             if (global.db.data.users[m.sender].money >= Bjagung * count) {
@@ -552,12 +551,12 @@ bila sudah tidak ada harganya, berarti sudah tidak bisa dibeli / sudah level max
                             conn.reply(m.chat, `✔️ Sukses Menjual ${count} Zamrud 🔮 Dengan Harga ${Szamrud * count} Money 💹`.trim(), m)
                         } else conn.reply(m.chat, `🔮 Zamrud Kamu Tidak Cukup`.trim(), m)
                         break
-                    case 'sapphire':
-                        if (global.db.data.users[m.sender].sapphire >= count * 1) {
-                            global.db.data.users[m.sender].zamrud += Ssapphire * count
-                            global.db.data.users[m.sender].sapphire -= count * 1
-                            conn.reply(m.chat, `✔️ Sukses Menjual ${count} Sapphire ⚱ Dengan Harga ${Ssapphire * count} zamrud 🔮`.trim(), m)
-                        } else conn.reply(m.chat, `⚱ Sapphire Kamu Tidak Cukup`.trim(), m)
+                    case 'spesial':
+                        if (global.db.data.users[m.sender].spesial >= count * 1) {
+                            global.db.data.users[m.sender].gold += Sspesial * count
+                            global.db.data.users[m.sender].spesial -= count * 1
+                            conn.reply(m.chat, `✔️ Sukses Menjual ${count} Spesial 🗿 Dengan Harga ${Sspesial * count} Gold 🪙`.trim(), m)
+                        } else conn.reply(m.chat, `🗿 Sapphire Kamu Tidak Cukup`.trim(), m)
                         break      
                     case 'arloji':
                         if (global.db.data.users[m.sender].arlok >= count * 1) {
