@@ -1,6 +1,6 @@
 
 let handler = async (m, { conn, command, args, text, usedPrefix }) => {
-    let bruh = `${usedPrefix}open <crate name> < 1 | 10 | 100 | 1000 >\n\nContoh penggunaan: *${usedPrefix}open common 10*\n\nlist crate:\n*pet*\n*boxs*\n*cupon*\n*common*\n*uncommon*\n*mythic*\n*legendary*\n*superior*\n*ancient*\n*superancient*`
+    let bruh = `${usedPrefix}open <crate name> < 1 | 10 | 100 | 1000 >\n\nContoh penggunaan: *${usedPrefix}open common 10*\n\nlist crate:\n*pet*\n*boxs*\n*cupon*\n*common*\n*uncommon*\n*mythic*\n*legendary*\n*sakura*\n*ancient*\n*superancient*`
     let _lmao = args[0]
     let Lmao = `Hanya support 1, 10, 100, 1000\nContoh penggunaan: *${usedPrefix}open ${args > 2 ? _lmao : pickRandom(['common', 'uncommon', 'mythic', 'legendary', 'superior', 'ancient', 'superancient'])} 10*`
     let type = (args[0] || '').toLowerCase()
@@ -475,7 +475,7 @@ Anda telah membuka *Mythic crate* dan mendapatkan:${mm3 > 0 ? `\nMoney: ${mm3}` 
                     return conn.reply(m.chat, Lmao, m)
             }
             break
-        case 'boxs':
+        case 'spesial':
             switch (jumlah) {
                 case '1':
                 case 'crate':
@@ -483,14 +483,14 @@ Anda telah membuka *Mythic crate* dan mendapatkan:${mm3 > 0 ? `\nMoney: ${mm3}` 
                     let _lastimed = (30000 - __lastimed) 
                     let lastimed = clockString(_lastimed)
                     if (new Date - global.db.data.users[m.sender].lastopen > 30000) {
-                    let _mmz = `${Math.floor(Math.random() * 500)}`.trim()
-                    let _bbbz = `${pickRandom(['0', '0', '1', '0'])}`.trim()
-                    let _mez = `${Math.floor(Math.random() * 250)}`.trim()
-                    let _mpz = `${Math.floor(Math.random() * 3)}`.trim()
-                    let _lmz = `${Math.floor(Math.random() * 3)}`.trim()
-                    let _hmz = `${Math.floor(Math.random() * 5)}`.trim()
-                    let _mlz = `${Math.floor(Math.random() * 1)}`.trim()
-                    let _ebz = `${Math.floor(Math.random() * 3)}`.trim()
+                    let _mmz = `${Math.floor(Math.random() * 95000000)}`.trim()
+                    let _bbbz = `${pickRandom(['0', '0', '1', '2'])}`.trim()
+                    let _mez = `${Math.floor(Math.random() * 2564)}`.trim()
+                    let _mpz = `${Math.floor(Math.random() * 380)}`.trim()
+                    let _lmz = `${Math.floor(Math.random() * 365)}`.trim()
+                    let _hmz = `${Math.floor(Math.random() * 594)}`.trim()
+                    let _mlz = `${Math.floor(Math.random() * 127)}`.trim()
+                    let _ebz = `${Math.floor(Math.random() * 30)}`.trim()
                     let mmz = (_mmz * 1)
                     let bbbz = (_bbbz * 1)
                     let mez = (_mez * 1)
@@ -500,10 +500,10 @@ Anda telah membuka *Mythic crate* dan mendapatkan:${mm3 > 0 ? `\nMoney: ${mm3}` 
                     let lmz = (_lmz * 1)
                     let ebz = (_ebz * 1)
                     let Mychatz = `
-Anda telah membuka *Boxs crate* dan mendapatkan:${mmz > 0 ? `\nMoney: ${mmz}` : ''}${mez > 0 ? `\nExp: ${mez} *exp*` : ''}${ebz > 0 ? `\nEmasBiasa: ${ebz} *emasbiasa*` : ''}${mpz > 0 ? `\nPotion: ${mpz} *potion*` : ''}${hmz > 0 ? `\nTiketM: ${hmz} *tiketm*` : ''}${lmz > 0 ? `\nMakanan Pet: ${lmz} *makananpet*` : ''}
+Anda telah membuka *Spesial crate* dan mendapatkan:${mmz > 0 ? `\nMoney: ${mmz}` : ''}${mez > 0 ? `\nExp: ${mez} *exp*` : ''}${ebz > 0 ? `\nEmasBiasa: ${ebz} *emasbiasa*` : ''}${mpz > 0 ? `\nPotion: ${mpz} *potion*` : ''}${hmz > 0 ? `\nTiketM: ${hmz} *tiketm*` : ''}${lmz > 0 ? `\nMakanan Pet: ${lmz} *makananpet*` : ''}
 `.trim()
-                    if (global.db.data.users[m.sender].boxs >= 1) {
-                        global.db.data.users[m.sender].boxs -= 1
+                    if (global.db.data.users[m.sender].spesial >= 1) {
+                        global.db.data.users[m.sender].spesial -= 1
                         global.db.data.users[m.sender].money += mmz * 1
                         global.db.data.users[m.sender].emasbiasa += ebz * 1
                         global.db.data.users[m.sender].exp += mez * 1
@@ -513,14 +513,14 @@ Anda telah membuka *Boxs crate* dan mendapatkan:${mmz > 0 ? `\nMoney: ${mmz}` : 
                         global.db.data.users[m.sender].lastopen = new Date * 1
                         conn.reply(m.chat, Mychatz, m)
                         if (bbbz > 0) {
-                            conn.reply(m.chat, `*Selamat anda mendapatkan item Rare yaitu*\n${bbbz} Boxs Crate`, m)
-                            global.db.data.users[m.sender].boxs += bbbz * 1
+                            conn.reply(m.chat, `*Selamat anda mendapatkan item Rare yaitu*\n${bbbz} Spesial Crate`, m)
+                            global.db.data.users[m.sender].spesial += bbbz * 1
                         }
                         if (mlz > 0) {
                             conn.reply(m.chat, `*Selamat anda mendapatkan item Epic yaitu*\n${mlz} Legendary Crate`, m)
                             global.db.data.users[m.sender].legendary += mlz * 1
                         }
-                    } else conn.reply(m.chat, 'Boxs crate anda tidak cukup', m)
+                    } else conn.reply(m.chat, 'Spesial crate anda tidak cukup', m)
                 } else conn.reply(m.chat, `Mohon tunggu ${lastimed} lagi untuk bisa membuka fitur open`, m)
                 break
                 case '10': 
@@ -528,14 +528,14 @@ Anda telah membuka *Boxs crate* dan mendapatkan:${mmz > 0 ? `\nMoney: ${mmz}` : 
                     let _lastimedo = (30000 - __lastimedo) 
                     let lastimedo = clockString(_lastimedo)
                     if (new Date - global.db.data.users[m.sender].lastopen > 30000) {
-                    let _mme= `${Math.floor(Math.random() * 5000)}`.trim()
-                    let _bbbe = `${Math.floor(Math.random() * 4)}`.trim()
-                    let _mee = `${Math.floor(Math.random() * 2500)}`.trim()
-                    let _mpe = `${Math.floor(Math.random() * 6)}`.trim()
-                    let _lme = `${Math.floor(Math.random() * 8)}`.trim()
-                    let _hme = `${Math.floor(Math.random() * 10)}`.trim()
-                    let _mle = `${Math.floor(Math.random() * 3)}`.trim()
-                    let _ebe = `${Math.floor(Math.random() * 8)}`.trim()
+                    let _mme= `${Math.floor(Math.random() * 5000000)}`.trim()
+                    let _bbbe = `${Math.floor(Math.random() * 400000)}`.trim()
+                    let _mee = `${Math.floor(Math.random() * 25000)}`.trim()
+                    let _mpe = `${Math.floor(Math.random() * 60000)}`.trim()
+                    let _lme = `${Math.floor(Math.random() * 8000000)}`.trim()
+                    let _hme = `${Math.floor(Math.random() * 100000)}`.trim()
+                    let _mle = `${Math.floor(Math.random() * 30000)}`.trim()
+                    let _ebe = `${Math.floor(Math.random() * 800000)}`.trim()
                     let mme = (_mme * 1)
                     let bbbe = (_bbbe * 1)
                     let mee = (_mee * 1)
@@ -545,10 +545,10 @@ Anda telah membuka *Boxs crate* dan mendapatkan:${mmz > 0 ? `\nMoney: ${mmz}` : 
                     let lme = (_lme * 1)
                     let ebe = (_ebe * 1)
                     let Mychate = `
-Anda telah membuka *Boxs crate* dan mendapatkan:${mme > 0 ? `\nMoney: ${mme}` : ''}${mee > 0 ? `\nExp: ${mee} *exp*` : ''}${ebe > 0 ? `\nEmasBiasa: ${ebe} *emasbiasa*` : ''}${mpe > 0 ? `\nPotion: ${mpe} *potion*` : ''}${hme > 0 ? `\nTiketM: ${hme} *tiketm*` : ''}${lme > 0 ? `\nMakanan Pet: ${lme} *makananpet*` : ''}
+Anda telah membuka *Spesial crate* dan mendapatkan:${mme > 0 ? `\nMoney: ${mme}` : ''}${mee > 0 ? `\nExp: ${mee} *exp*` : ''}${ebe > 0 ? `\nEmasBiasa: ${ebe} *emasbiasa*` : ''}${mpe > 0 ? `\nPotion: ${mpe} *potion*` : ''}${hme > 0 ? `\nTiketM: ${hme} *tiketm*` : ''}${lme > 0 ? `\nMakanan Pet: ${lme} *makananpet*` : ''}
 `.trim()
-                    if (global.db.data.users[m.sender].boxs >= 10) {
-                        global.db.data.users[m.sender].boxs -= 10
+                    if (global.db.data.users[m.sender].spesial >= 10) {
+                        global.db.data.users[m.sender].spesial -= 10
                         global.db.data.users[m.sender].money += mme * 1
                         global.db.data.users[m.sender].emasbiasa += ebe * 1
                         global.db.data.users[m.sender].exp += mee * 1
@@ -558,14 +558,14 @@ Anda telah membuka *Boxs crate* dan mendapatkan:${mme > 0 ? `\nMoney: ${mme}` : 
                         global.db.data.users[m.sender].lastopen = new Date * 1
                         conn.reply(m.chat, Mychate, m)
                         if (bbbe > 0) {
-                            conn.reply(m.chat, `*Selamat anda mendapatkan item Rare yaitu*\n${bbbe} Boxs Crate`, m)
-                            global.db.data.users[m.sender].boxs += bbbe * 1
+                            conn.reply(m.chat, `*Selamat anda mendapatkan item Rare yaitu*\n${bbbe} Spesial Crate`, m)
+                            global.db.data.users[m.sender].spesial += bbbe * 1
                         }
                         if (mle > 0) {
                             conn.reply(m.chat, `*Selamat anda mendapatkan item Epic yaitu*\n${mle} Legendary Crate`, m)
                             global.db.data.users[m.sender].legendary += mle * 1
                         }
-                    } else conn.reply(m.chat, 'Boxs crate anda tidak cukup', m)
+                    } else conn.reply(m.chat, 'Spesial crate anda tidak cukup', m)
                 } else conn.reply(m.chat, `Mohon tunggu ${lastimedo} lagi untuk bisa membuka fitur open`, m)
                 break
                 case '100':
@@ -573,14 +573,14 @@ Anda telah membuka *Boxs crate* dan mendapatkan:${mme > 0 ? `\nMoney: ${mme}` : 
                     let _lastimedoo = (30000 - __lastimedoo) 
                     let lastimedoo = clockString(_lastimedoo)
                     if (new Date - global.db.data.users[m.sender].lastopen > 30000) {
-                    let _mmk = `${Math.floor(Math.random() * 50000)}`.trim()
-                    let _bbbk = `${Math.floor(Math.random() * 10)}`.trim()
-                    let _mek = `${Math.floor(Math.random() * 40000)}`.trim()
-                    let _mpk = `${Math.floor(Math.random() * 16)}`.trim()
-                    let _lmk = `${Math.floor(Math.random() * 12)}`.trim()
-                    let _hmk = `${Math.floor(Math.random() * 30)}`.trim()
-                    let _mlk = `${Math.floor(Math.random() * 5)}`.trim()
-                    let _ebk = `${Math.floor(Math.random() * 14)}`.trim()
+                    let _mmk = `${Math.floor(Math.random() * 500000000000)}`.trim()
+                    let _bbbk = `${Math.floor(Math.random() * 10000000000)}`.trim()
+                    let _mek = `${Math.floor(Math.random() * 40000000)}`.trim()
+                    let _mpk = `${Math.floor(Math.random() * 160000000)}`.trim()
+                    let _lmk = `${Math.floor(Math.random() * 120000000)}`.trim()
+                    let _hmk = `${Math.floor(Math.random() * 3000000000)}`.trim()
+                    let _mlk = `${Math.floor(Math.random() * 500000000)}`.trim()
+                    let _ebk = `${Math.floor(Math.random() * 10000004)}`.trim()
                     let mmk = (_mmk * 1)
                     let bbbk = (_bbbk * 1)
                     let mek = (_mek * 1)
@@ -590,10 +590,10 @@ Anda telah membuka *Boxs crate* dan mendapatkan:${mme > 0 ? `\nMoney: ${mme}` : 
                     let lmk = (_lmk * 1)
                     let ebk = (_ebk * 1)
                     let Mychatp = `
-Anda telah membuka *Boxs crate* dan mendapatkan:${mmk > 0 ? `\nMoney: ${mmk}` : ''}${mek > 0 ? `\nExp: ${mek} *exp*` : ''}${ebk > 0 ? `\nEmasBiasa: ${ebk} *emasbiasa*` : ''}${mpk > 0 ? `\nPotion: ${mpk} *potion*` : ''}${hmk > 0 ? `\nTiketM: ${hmk} *tiketm*` : ''}${lmk > 0 ? `\nMakanan Pet: ${lmk} *makananpet*` : ''}
+Anda telah membuka *Spesial crate* dan mendapatkan:${mmk > 0 ? `\nMoney: ${mmk}` : ''}${mek > 0 ? `\nExp: ${mek} *exp*` : ''}${ebk > 0 ? `\nEmasBiasa: ${ebk} *emasbiasa*` : ''}${mpk > 0 ? `\nPotion: ${mpk} *potion*` : ''}${hmk > 0 ? `\nTiketM: ${hmk} *tiketm*` : ''}${lmk > 0 ? `\nMakanan Pet: ${lmk} *makananpet*` : ''}
 `.trim()
-                    if (global.db.data.users[m.sender].boxs >= 100) {
-                        global.db.data.users[m.sender].boxs -= 100
+                    if (global.db.data.users[m.sender].spesial >= 100) {
+                        global.db.data.users[m.sender].spesial -= 100
                         global.db.data.users[m.sender].money += mmk * 1
                         global.db.data.users[m.sender].emasbiasa += ebk * 1
                         global.db.data.users[m.sender].exp += mek * 1
@@ -603,8 +603,8 @@ Anda telah membuka *Boxs crate* dan mendapatkan:${mmk > 0 ? `\nMoney: ${mmk}` : 
                         global.db.data.users[m.sender].lastopen = new Date * 1
                         conn.reply(m.chat, Mychatp, m)
                         if (bbbk > 0) {
-                            conn.reply(m.chat, `*Selamat anda mendapatkan item Rare yaitu*\n${bbbk} Boxs Crate`, m)
-                            global.db.data.users[m.sender].boxs += bbbk * 1
+                            conn.reply(m.chat, `*Selamat anda mendapatkan item Rare yaitu*\n${bbbk} Spesial Crate`, m)
+                            global.db.data.users[m.sender].spesial += bbbk * 1
                         }
                         if (mlk > 0) {
                             conn.reply(m.chat, `*Selamat anda mendapatkan item Epic yaitu*\n${mlk} Legendary Crate`, m)
@@ -618,14 +618,14 @@ Anda telah membuka *Boxs crate* dan mendapatkan:${mmk > 0 ? `\nMoney: ${mmk}` : 
                     let _lastimedooo = (30000 - __lastimedooo) 
                     let lastimedooo = clockString(_lastimedooo)
                     if (new Date - global.db.data.users[m.sender].lastopen > 30000) {
-                    let _mmo = `${Math.floor(Math.random() * 500000)}`.trim()
-                    let _bbbo= `${Math.floor(Math.random() * 50)}`.trim()
-                    let _meo = `${Math.floor(Math.random() * 400000)}`.trim()
-                    let _mpo = `${Math.floor(Math.random() * 100)}`.trim()
-                    let _lmo = `${Math.floor(Math.random() * 100)}`.trim()
-                    let _hmo = `${Math.floor(Math.random() * 100)}`.trim()
-                    let _mlo = `${Math.floor(Math.random() * 50)}`.trim()
-                    let _ebo = `${Math.floor(Math.random() * 100)}`.trim()
+                    let _mmo = `${Math.floor(Math.random() * 5000000000000)}`.trim()
+                    let _bbbo= `${Math.floor(Math.random() * 5000000000)}`.trim()
+                    let _meo = `${Math.floor(Math.random() * 4000000000000)}`.trim()
+                    let _mpo = `${Math.floor(Math.random() * 100000000)}`.trim()
+                    let _lmo = `${Math.floor(Math.random() * 1000000)}`.trim()
+                    let _hmo = `${Math.floor(Math.random() * 1000000)}`.trim()
+                    let _mlo = `${Math.floor(Math.random() * 5000000)}`.trim()
+                    let _ebo = `${Math.floor(Math.random() * 10000000)}`.trim()
                     let mmo = (_mmo * 1)
                     let bbbo = (_bbbo * 1)
                     let meo = (_meo * 1)
@@ -635,10 +635,10 @@ Anda telah membuka *Boxs crate* dan mendapatkan:${mmk > 0 ? `\nMoney: ${mmk}` : 
                     let lmo = (_lmo * 1)
                     let ebo = (_ebo * 1)
                     let Mychatk = `
-Anda telah membuka *Boxs crate* dan mendapatkan:${mmo > 0 ? `\nMoney: ${mmo}` : ''}${meo > 0 ? `\nExp: ${meo} *exp*` : ''}${ebo > 0 ? `\nEmasBiasa: ${ebo} *emasbiasa*` : ''}${mpo > 0 ? `\nPotion: ${mpo} *potion*` : ''}${hmo > 0 ? `\nTiketM: ${hmo} *tiketm*` : ''}${lmo > 0 ? `\nMakanan Pet: ${lmo} *makananpet*` : ''}
+Anda telah membuka *Spesial crate* dan mendapatkan:${mmo > 0 ? `\nMoney: ${mmo}` : ''}${meo > 0 ? `\nExp: ${meo} *exp*` : ''}${ebo > 0 ? `\nEmasBiasa: ${ebo} *emasbiasa*` : ''}${mpo > 0 ? `\nPotion: ${mpo} *potion*` : ''}${hmo > 0 ? `\nTiketM: ${hmo} *tiketm*` : ''}${lmo > 0 ? `\nMakanan Pet: ${lmo} *makananpet*` : ''}
 `.trim()
-                    if (global.db.data.users[m.sender].boxs >= 1000) {
-                        global.db.data.users[m.sender].boxs -= 1000
+                    if (global.db.data.users[m.sender].spesial >= 1000) {
+                        global.db.data.users[m.sender].spesial -= 1000
                         global.db.data.users[m.sender].money += mmo * 1
                         global.db.data.users[m.sender].emasbiasa += ebo * 1
                         global.db.data.users[m.sender].exp += meo * 1
@@ -649,13 +649,13 @@ Anda telah membuka *Boxs crate* dan mendapatkan:${mmo > 0 ? `\nMoney: ${mmo}` : 
                         conn.reply(m.chat, Mychatk, m)
                         if (bbbo > 0) {
                             conn.reply(m.chat, `*Selamat anda mendapatkan item Rare yaitu*\n${bbbo} Boxs Crate`, m)
-                            global.db.data.users[m.sender].boxs += bbbo * 1
+                            global.db.data.users[m.sender].spesial += bbbo * 1
                         }
                         if (mlo > 0) {
                             conn.reply(m.chat, `*Selamat anda mendapatkan item Epic yaitu*\n${mlo} Legendary Crate`, m)
                             global.db.data.users[m.sender].legendary += mlo * 1
                         }
-                    } else conn.reply(m.chat, 'Boxs crate anda tidak cukup', m)
+                    } else conn.reply(m.chat, 'Spesial crate anda tidak cukup', m)
                 } else conn.reply(m.chat, `Mohon tunggu ${lastimedooo} lagi untuk bisa membuka fitur open`, m)
                 break
                 
@@ -1690,7 +1690,7 @@ Anda telah membuka *superancient crate* dan mendapatkan:${xm3 > 0 ? `\nMoney: ${
 handler.help = ['open <crate>']
 handler.tags = ['rpg']
 handler.command = /^(open)$/i
-handler.limit = true
+handler.register = true
 
 handler.fail = null
 
