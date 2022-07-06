@@ -4,13 +4,13 @@ global.mods = []
 global.prems = [] 
 
 //=============『 Info Owner 』============== //
-global.nameowner = 'Hyzer Official'
-global.numberowner = '6285363439190'
+global.nameowner = 'RafKangColmek Official'
+global.numberowner = '081946495315'
 global.instagram = 'https://instagram.com/hyzer_stfu'
 global.github = 'https://github.com/Hyzerr'
-global.dana = '085363439190'
-global.pulsa = '085363439190'
-global.gopay = '087666666666'
+global.dana = '081946495315'
+global.pulsa = '081946495315'
+global.gopay = '081946495315'
 
 //=============『 Info Bot 』=================//
 global.namebot = 'lucky Bot'
@@ -23,10 +23,10 @@ global.fotonya1 = 'https://telegra.ph/file/e4a2f4339da8a32ad20a1.jpg' //ganti ja
 global.fotonya2 = 'https://telegra.ph/file/8c471d45b6cedad43cf84.jpg' //ini juga ganti 
 global.lolkey = 'Papah-Chan' //biar mudah ngegantinya semisal apikeynya expired:v
 global.zenzkey = 'BagasPrdn' //ganti jadi apikey lu kalau expired
-global.wm = 'lucky ʙᴏᴛ'
+global.wm = 'raf ʙᴏᴛ'
 global.watermark = wm
-global.wm2 = '                     「 lucky あ⁩ 」'
-global.wm3 = 'lucky'
+global.wm2 = '                     「 raf あ⁩ 」'
+global.wm3 = 'raf'
 global.htki = '––––––『' 
 global.htka = '』––––––'
 global.media = 'https://telegra.ph/file/72168c6f1aaa90315c369.jpg'
@@ -37,7 +37,7 @@ global.benar = 'Benar ✅\n'
 global.salah = 'Salah ❌\n'
 global.stiker_wait = 'Stiker sedang dibuat'
 global.packname = '2022'
-global.author = '© Hyzer Official'
+global.author = '© Raf Official'
 
 //=============『 Apikey 』================== //
 global.APIs = { // API Prefix
