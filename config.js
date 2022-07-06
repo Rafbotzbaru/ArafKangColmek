@@ -1,21 +1,21 @@
 //=============『 Utama 』================== //
-global.owner = ['6285363439190'] 
-global.mods = [] 
-global.prems = [] 
+global.owner = ['6281946945315'] 
+global.mods = ['6281946945315'] 
+global.prems = ['6281946945315'] 
 
 //=============『 Info Owner 』============== //
-global.nameowner = 'lucky Official'
-global.numberowner = '6285363439190'
-global.instagram = 'https://instagram.com/hyzer_stfu'
-global.github = 'https://github.com/Hyzerr'
-global.dana = '081333254382'
-global.pulsa = '081333254382'
-global.gopay = '087666666666'
+global.nameowner = 'Asyraf 6Youu'
+global.numberowner = '6281946945315'
+global.instagram = 'https://instagram.com/asyrafsixyouu'
+global.github = 'https://github.com/Rafbotzbaru'
+global.dana = '085646606905'
+global.pulsa = '085646606905'
+global.gopay = '081946945315'
 
 //=============『 Info Bot 』=================//
-global.namebot = 'lucky Bot'
-global.gc = 'bit.ly/AnyaBot-Group'
-global.web = 'https://github.com/Hyzerr' //ubah jadi website lu, bisa link ig, link github, link yt, klo link gc ntr beda tampilan lagi. 
+global.namebot = 'Raf Bot'
+global.gc = 'https://chat.whatsapp.com/CRrj0z3HgeX39XHNUt0M9V'
+global.web = 'https://github.com/Rafbotzbaru' //ubah jadi website lu, bisa link ig, link github, link yt, klo link gc ntr beda tampilan lagi. 
 global.price1 = '1 bulan = 10.000\n2 Minggu 7.000\n1 Minggu 5.000'
 
 //=======『 Tampilan Dan Lainnya 』============//
@@ -23,21 +23,21 @@ global.fotonya1 = 'https://telegra.ph/file/e4a2f4339da8a32ad20a1.jpg' //ganti ja
 global.fotonya2 = 'https://telegra.ph/file/8c471d45b6cedad43cf84.jpg' //ini juga ganti 
 global.lolkey = 'Papah-Chan' //biar mudah ngegantinya semisal apikeynya expired:v
 global.zenzkey = 'BagasPrdn' //ganti jadi apikey lu kalau expired
-global.wm = 'lucky ʙᴏᴛ'
+global.wm = 'Raf Botz'
 global.watermark = wm
-global.wm2 = '                     「 lucky あ⁩ 」'
-global.wm3 = 'lucky'
+global.wm2 = 'Raf Botz🗿🚬'
+global.wm3 = 'Asyraf'
 global.htki = '––––––『' 
 global.htka = '』––––––'
 global.media = 'https://telegra.ph/file/72168c6f1aaa90315c369.jpg'
 global.fla = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=smurfs-logo&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&text='
-global.wait = '_*tunggu sedang di proses...*_'
-global.eror = '_*Server Error*_'
-global.benar = 'Benar ✅\n'
-global.salah = 'Salah ❌\n'
-global.stiker_wait = 'Stiker sedang dibuat'
-global.packname = '2022'
-global.author = '© Hyzer Official'
+global.wait = '_*bokep upin ipin sedang diproses...*_'
+global.eror = '_*Server Error Tolol*_'
+global.benar = 'Benar Tolol✅\n'
+global.salah = 'Salah Kontol❌\n'
+global.stiker_wait = 'Stiker bokep upin ipin sedang dibuat'
+global.packname = 'Sticker By'
+global.author = 'Asyraf 6Youu'
 
 //=============『 Apikey 』================== //
 global.APIs = { // API Prefix
